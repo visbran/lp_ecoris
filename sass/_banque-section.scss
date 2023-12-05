@@ -1,0 +1,204 @@
+/**************************************/
+/*         SECTION - BANQUE           */
+/**************************************/
+
+.banque-section {
+  background-color: $yellow;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  .graduated-white {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+
+    svg {
+      fill: $banqueWhiteSmiley;
+    }
+  }
+
+  .masqued-green {
+    position: absolute;
+    right: 0px;
+    top: -7px;
+
+    svg {
+      fill: $banqueGreenSmiley;
+      width: 77px;
+      height: 77px;
+    }
+  }
+
+  .white-smiley {
+    position: absolute;
+    right: 180px;
+    top: 120px;
+    svg {
+      fill: $yellow;
+    }
+  }
+
+  .banque-content {
+    background-color: $white;
+    border-radius: 5px;
+    padding: 85px 30px 40px 30px;
+    position: relative;
+    top: 70px;
+    hyphens: auto;
+    word-wrap: break-word;
+    z-index: 2;
+
+
+    .filieres {
+      text-align: center;
+      color: $white;
+      background: $redAdobe;
+      transform: rotate(354deg) translate(-50%);
+      left: 65px;
+      width: 90px;
+      border-radius: 5px;
+      padding: 5px 10px 5px 10px;
+      position: absolute;
+      top: -25px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-family: $f-primary;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 1;
+
+      &:after {
+        content: "";
+        background: url("../img/avenirs-augmentes.svg") no-repeat;
+        background-size: 115px;
+        height: 75px;
+        width: 145px;
+        position: absolute;
+        top: 15px;
+        right: 0px;
+      }
+    }
+    .blue-slash {
+      color: $blue;
+    }
+
+    .banque-p1 {
+      font-size: 15px;
+    }
+
+    .banque-p2 {
+      font-family: $f-secondary;
+      font-size: 14px;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .banque-section {
+
+    .banque-content {
+      padding: 45px 50px 80px 50px;
+
+      h1 {
+        font-size: 45px !important;
+
+        &:after {
+          top: 95px !important;
+          background-size: 115px;
+          right: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .banque-section {
+    .banque-content {
+      //padding: 45px 50px 80px 50px;
+      h1 {
+        font-size: 60px!important;
+        &:after {
+          top : 110px!important;
+        }
+      }
+
+      .filieres {
+        left: 120px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .banque-section {
+    .masqued-green {
+      position: absolute;
+      right: 65px;
+      top: -13px;
+    }
+
+    .banque-content {
+
+      .banque-p1 {
+        font-size: 20px !important;
+      }
+
+      .banque-p2 {
+        font-size: 18px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .banque-section {
+
+    .masqued-green {
+      right: 120px;
+    }
+    .banque-content {
+
+      h1 {
+        font-size: 75px!important;
+        &:after {
+          top : 45px!important;
+        }
+      }
+      .banque-p1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .banque-p2 {
+        font-size: 18px;
+      }
+    }
+
+  }
+}
+
+@media (min-width: 1400px) {
+  .banque-section {
+    .banque-content {
+      .filieres {
+        left: 120px;
+      }
+
+    }
+  }
+}
+@media (min-width: 1600px) {
+  .banque-section {
+    .banque-content {
+      .filieres {
+        left: 120px;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,174 @@
+$pink: #ec0677;
+$raspberry: #ec145a;
+$red: #ec1a3a;
+$redAdobe: #FF0552;
+$yellow: #ffca05;
+$banqueSchoolYellowSmiley: #ffcb05;
+$lightorange: #f9a51a;
+$orange: #f26f21;
+$lightblue: #0094d9;
+$lightblueAdobe: #009DE2;
+$blue: #007dc4;
+$darkblue: #005baa;
+$darkgreen: #00a66c;
+$green: #0db14b;
+$banqueGreenSmiley: #00903E;
+$lightgreen: #71be44;
+$white: #ffffff;
+$black: #000000;
+$banqueWhiteSmiley: #fbfbfb;
+
+/***********************************/
+/** Administration des entreprises */
+/***********************************/
+
+$adminOrange : #F9A51A;
+$adminYellow: #ffca05;
+$adminLightGreen: #00A66C;
+$adminDarkGreen: #0B9666;
+
+/***********************************/
+/**           Immobilier           */
+/***********************************/
+
+$immoDarkViolet : #504A9E;
+$immoLightViolet : #6660BF;
+
+/***********************************/
+/**           Commercial           */
+/***********************************/
+
+$commercialDarkMauve : #926EB2;
+$commercialLightMauve: #A98DC2;
+$commercialViolet: #504A9E;
+
+/***********************************/
+/**  Communication Digitale        */
+/***********************************/
+
+$communicationDarkGreen: #71BE44;
+$communicationLightGreen: #A2CE62;
+$communicationFondBlue: #0094d9;
+$communicationFooterBlueSmiley: #00ADF2;
+
+/***********************************/
+/**  Comptabilité                  */
+/***********************************/
+$comptaVioletSmiley: #504A9E;
+$comptaBlue: #00BDF1;
+$comptaBackgroundBlue: #00B7CD;
+$comptaDarkOrange: #F9A51A;
+$comptaLightOrange: #F9BD1A;
+$comptaHeaderSmileyOrange: #FAA632;
+$comptaStudy: #ED8B03;
+
+
+/***************/
+/* bootstrap breakpoints */
+/* xs <576px */
+/* sm >=576px */
+/* md >=768px */
+/* lg >=992px */
+/* xl >=1200px */
+/* xxl >=1400px */
+
+/***********************************/
+/*        Fonts                     /
+/***********************************/
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro.otf') format('otf'),
+  url('../font/Intro/intro-webfont.woff') format('woff'),
+  url('../font/Intro/intro-webfont.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro-Black.otf') format('otf'),
+  url('../font/Intro/intro_black-webfont.woff') format('woff'),
+  url('../font/Intro/intro_black-webfont.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro-Black-Alt.otf') format('otf'),
+  url('../font/Intro/intro_black_alt-webfont.woff') format('woff'),
+  url('../font/Intro/intro_black_alt-webfont.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro-Bold.otf') format('otf'),
+  url('../font/Intro/intro_bold-webfont.woff') format('woff'),
+  url('../font/Intro/intro_bold-webfont.woff2') format('woff2');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro-Book.otf') format('otf'),
+  url('../font/Intro/intro_book-webfont.woff') format('woff'),
+  url('../font/Intro/intro_book-webfont.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro-Inline.otf') format('otf'),
+  url('../font/Intro/intro_inline-webfont.woff') format('woff'),
+  url('../font/Intro/intro_inline-webfont.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro-Light.otf') format('otf'),
+  url('../font/Intro/intro_light-webfont.woff') format('woff'),
+  url('../font/Intro/intro_light-webfont.woff2') format('woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('../font/Intro/Intro-Light-Caps.otf') format('otf'),
+  url('../font/Intro/intro_light_caps-webfont.woff') format('woff'),
+  url('../font/Intro/intro_light_caps-webfont.woff2') format('woff2');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Myriad-Pro;
+  src: url('../font/Myriad-Pro/Myriad-Pro-Black_31623.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Myriad-Pro;
+  src: url('../font/Myriad-Pro/Myriad-Pro-Bold-Italic_31626.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: Myriad-Pro;
+  src: url('../font/Myriad-Pro/Myriad-Pro_31655.ttf') format('truetype');
+  font-weight: 400;
+}
+
+$f-primary: "Intro", sans-serif;
+$f-secondary: "Myriad-Pro", sans-serif;
+
+a, svg, .download-button, .formation-button, .header-button, .footer-button {
+  transition : 200ms ease;
+}
+
+@media (min-width: 1400px)
+{
+.container {
+  max-width: 1210px;
+}
+}

@@ -1,0 +1,179 @@
+.commercial {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  header {
+    .filiere {
+      color: $commercialDarkMauve;
+    }
+    .blue-slash {
+      color: $commercialDarkMauve;
+    }
+  }
+.logo-section {
+  background: $redAdobe;
+}
+
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+
+  .banque-section {
+    background-color: $redAdobe;
+    .masqued-green {
+      svg{
+        fill: $yellow;
+      }
+    }
+    .graduated-white {
+      svg {
+        fill: $yellow;
+      }
+    }
+    .white-smiley {
+      svg {
+        fill: $redAdobe;
+      }
+    }
+
+    .banque-content {
+      .filieres {
+        background: $commercialViolet;
+      }
+      h1 {
+        &:after {
+          background: url("../img/commerce-avenirs-augmentes.svg") no-repeat;
+          background-size: 105px;
+          right: -10px;
+          @media (min-width:576px)  {
+            background-size: 115px;
+            top: 20px!important;
+          }
+          @media (min-width:768px)  {
+            background-size: 120px;
+
+            right: 10px;
+          }
+          @media (min-width:992px)  {
+            right: 40px;
+            background-size: 135px;
+          }
+          @media (min-width:1200px)  {
+           top: 25px!important;
+          }
+        }
+        .blue-slash {
+          color: $commercialDarkMauve;
+        }
+      }
+    }
+  }
+
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  .agenda-section {
+    background: linear-gradient(to right, $commercialDarkMauve, $commercialLightMauve);
+
+    &:after {
+      background: url("../img/commerce-graduate-violet-smiley.png") no-repeat;
+    }
+
+    .agenda-link {
+      &:hover {
+        color: $commercialDarkMauve!important;
+
+        svg {
+          fill: $commercialDarkMauve!important;
+        }
+      }
+    }
+
+  }
+
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+
+  .formation-section {
+    background: linear-gradient(to right, $commercialDarkMauve, $commercialLightMauve);
+
+    .li-arrow {
+      svg {
+        fill: $commercialDarkMauve !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  .study-section {
+    .h2-study {
+      color: $commercialLightMauve !important;
+    }
+
+    li:before {
+      color: $commercialViolet !important;
+    }
+  }
+
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  .school-section {
+    background: linear-gradient(to right, $commercialDarkMauve, $commercialLightMauve);
+
+    .h2-school {
+      color: $commercialViolet !important;
+    }
+
+    .card-tel {
+      svg {
+        stroke: $commercialViolet !important;
+      }
+      a:hover {
+        color: $redAdobe!important;
+
+        svg {
+          stroke: $redAdobe!important;
+        }
+      }
+    }
+    .card-mail {
+      a:hover {
+        color: $redAdobe!important;
+
+        svg {
+          fill: $redAdobe!important;
+        }
+      }
+    }
+    .card-insta {
+      a:hover {
+        color: $redAdobe !important;
+
+        svg {
+          fill: $redAdobe !important;
+        }
+      }
+    }
+    a {
+      color: $commercialViolet !important;
+
+      svg {
+        fill: $commercialViolet !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+
+  footer {
+    .social-links {
+      background: $redAdobe;
+    }
+  }
+}

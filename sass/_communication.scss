@@ -1,0 +1,195 @@
+.communication {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  header {
+    .filiere {
+      color: $communicationDarkGreen;
+    }
+    .blue-slash {
+      color: $communicationDarkGreen;
+    }
+  }
+
+  .logo-section {
+    background: $lightblue;
+  }
+
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+
+  .banque-section {
+    background-color: $lightblue;
+
+    .masqued-green {
+      svg {
+        fill: $comptaBlue;
+      }
+    }
+
+    .white-smiley {
+      svg {
+        fill: $comptaVioletSmiley;
+      }
+    }
+
+    .banque-content {
+      h1 {
+        &:after {
+          background: url("../img/communication-avenirs-augmentes.svg") no-repeat;
+          background-size: 100px;
+          right: -20px;
+          @media (min-width:576px)  {
+            top: 90px!important;
+          }
+          @media (min-width:768px)  {
+            background-size: 120px;
+            top: 105px!important;
+          }
+          @media (min-width:992px)  {
+            background-size: 140px;
+            top: 20px!important;
+            right: 40px;
+          }
+          @media (min-width:1200px)  {
+            background-size: 140px;
+            right: 40px;
+            top: 25px!important;
+          }
+
+        }
+        .blue-slash {
+          color: $communicationDarkGreen;
+        }
+      }
+    }
+  }
+
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  .agenda-section {
+    background: linear-gradient(to right, $communicationDarkGreen, $communicationLightGreen);
+
+    &:after {
+      background: url("../img/communication-graduate-yellow-smiley.png") no-repeat;
+    }
+
+    .agenda-link {
+      &:hover {
+        color: $communicationDarkGreen!important;
+
+        svg {
+          fill: $communicationDarkGreen!important;
+        }
+      }
+    }
+
+  }
+
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+
+  .formation-section {
+    background: linear-gradient(to right, $communicationDarkGreen, $communicationLightGreen);
+
+    .li-arrow {
+      svg {
+        fill: $communicationLightGreen !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  .study-section {
+    .h2-study {
+      color: $communicationLightGreen !important;
+    }
+
+    li:before {
+      color: $communicationLightGreen !important;
+    }
+  }
+
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  .school-section {
+    background: linear-gradient(to right, $communicationDarkGreen, $communicationLightGreen);
+
+    &:before {
+      background-image: url("../img/communication-school-graduated.svg");
+    }
+
+    .h2-school {
+      color: $communicationLightGreen !important;
+    }
+
+    .card-tel {
+      svg {
+        stroke: $communicationLightGreen !important;
+      }
+
+      a:hover {
+        color: $lightblue !important;
+
+        svg {
+          stroke: $lightblue !important;
+        }
+      }
+    }
+
+    .card-mail {
+      a:hover {
+        color: $lightblue !important;
+
+        svg {
+          fill: $lightblue !important;
+        }
+      }
+    }
+    .card-insta {
+      a:hover {
+        color: $lightblue !important;
+
+        svg {
+          fill: $lightblue !important;
+        }
+      }
+    }
+    a {
+      color: $communicationLightGreen !important;
+
+      svg {
+        fill: $communicationLightGreen !important;
+      }
+    }
+
+    .school-masqued-smiley {
+      svg {
+        fill: $comptaVioletSmiley;
+      }
+    }
+
+    .school-smiley {
+      svg {
+        fill: $comptaBlue;
+      }
+    }
+
+  }
+
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+
+  footer {
+    .social-links {
+      background: $lightblue;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.immobilier {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  header {
+    .filiere {
+      color: $immoDarkViolet;
+    }
+  }
+
+
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+
+  .banque-section {
+    .masqued-green {
+      svg{
+        fill: $immoDarkViolet;
+      }
+
+    }
+
+    .banque-content {
+      h1 {
+        &:after {
+          background: url("../img/immo-avenirs-augmentes.svg") no-repeat;
+          background-size: 100px;
+          right: -20px;
+          top: 20px!important;
+
+          @media (min-width:768px)  {
+            background-size: 120px;
+            top: 20px!important;
+          }
+          @media (min-width:992px)  {
+            background-size: 140px;
+            right: 40px;
+          }
+          @media (min-width:1200px)  {
+            background-size: 140px;
+            right: 40px;
+            top: 25px!important;
+          }
+        }
+      }
+    }
+  }
+
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  .agenda-section {
+    background: linear-gradient(to right, $immoDarkViolet, $immoLightViolet);
+ &:after {
+   top: -360px;
+ }
+    .agenda-link {
+      &:hover {
+        color: $immoDarkViolet!important;
+
+        svg {
+          fill: $immoDarkViolet!important;
+        }
+      }
+    }
+  }
+
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+
+  .formation-section {
+    background: linear-gradient(to right, $immoDarkViolet, $immoLightViolet);
+
+    .li-arrow {
+      svg {
+        fill: $immoDarkViolet !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  .study-section {
+    .h2-study {
+      color: $commercialViolet !important;
+    }
+
+    li:before {
+      color: $commercialViolet !important;
+    }
+  }
+
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  .school-section {
+    background: linear-gradient(to right, $immoDarkViolet, $immoLightViolet);
+
+    .h2-school {
+      color: $commercialViolet !important;
+    }
+
+    .card-tel {
+      svg {
+        stroke: $commercialViolet !important;
+      }
+      a:hover {
+        color: $yellow!important;
+
+        svg {
+          stroke: $yellow!important;
+        }
+      }
+    }
+    .card-mail {
+      a:hover {
+        color: $yellow!important;
+
+        svg {
+          fill: $yellow!important;
+        }
+      }
+    }
+    .card-insta {
+      a:hover {
+        color: $yellow !important;
+
+        svg {
+          fill: $yellow !important;
+        }
+      }
+    }
+    a {
+      color: $commercialViolet !important;
+
+      svg {
+        fill: $commercialViolet !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+
+  footer {
+  }
+}

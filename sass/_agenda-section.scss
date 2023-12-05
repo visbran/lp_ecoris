@@ -1,0 +1,210 @@
+/**************************************/
+/*         SECTION - AGENDA           */
+/**************************************/
+
+.agenda-section {
+  margin-bottom: -1px;
+  background: linear-gradient(to right, $blue, $lightblue);
+  position: relative;
+  padding-top: 70px;
+
+  &:after {
+    content: "";
+    background: url("../img/graduate-red-smiley(1).png") no-repeat;
+    background-size: 200px !important;
+    height: 400px;
+    width: 200px;
+    position: absolute;
+    top: -55px;
+    right: 0px;
+  }
+
+  .agenda-title {
+    background-color: $black;
+    border-radius: 8px 8px 0px 0px;
+    color: $white;
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    margin-top: 85px;
+
+    h2 {
+      margin: 0px;
+      font-weight: bold;
+    }
+  }
+
+  .notes {
+    display: none;
+  }
+
+  .agenda-details {
+    background-color: $white;
+    display: block;
+    justify-content: center;
+    border-radius: 0px 0px 5px 5px;
+    padding: 10px;
+    position: relative;
+
+    &:before {
+      content: "";
+      background: url("../img/blacksmiley.svg");
+      background-size: 60px;
+      height: 60px;
+      width: 60px;
+      position: absolute;
+      top: -30px;
+      left: -300px;
+    }
+
+    .agenda-event {
+      padding: 0px 20px 0px 0px;
+
+      .agenda-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .agenda-date {
+          p {
+            margin: 0px;
+          }
+
+          line-height: 1.1;
+          text-align: center;
+          background-color: $yellow;
+          color: $white;
+          border-radius: 1px;
+          padding: 10px 10px;
+          margin: 10px;
+          font-weight: bold;
+
+          .date-number {
+            font-size: 24px;
+          }
+
+          .month {
+            font-size: 14px;
+          }
+        }
+
+        .agenda-texte {
+          line-height: 1.1;
+          font-family: $f-secondary;
+          font-size: 15px;
+        }
+      }
+
+      .agenda-links {
+        text-align: right;
+        padding-right: 15px;
+        position: relative;
+        top: -15px;
+
+        .agenda-link {
+          font-weight: 700;
+          color: $redAdobe;
+          text-transform: uppercase;
+          font-size: 11px;
+          text-decoration: none;
+          text-align: right;
+
+          &:hover {
+            color: $lightblueAdobe;
+
+            svg {
+              fill: $lightblueAdobe;
+            }
+          }
+
+          svg {
+            fill: $redAdobe;
+            vertical-align: baseline;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .agenda-section {
+
+    .agenda-title {
+      position: relative;
+
+      &:before {
+        content: "";
+        background: url("../img/take_note.svg") no-repeat;
+        width: 200px;
+        height: 153px;
+        position: absolute;
+        top: 35px;
+        left: -220px;
+        z-index: 1;
+      }
+    }
+
+    .agenda-details {
+      &.before {
+        top: -100px;
+        left: -207px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .agenda-section {
+    padding-top: 0px;
+
+    &:after {
+      top: -200px;
+    }
+
+    .agenda-title {
+      margin-top: 180px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .agenda-section {
+    &:after {
+      top: -400px;
+      background-size: 400px !important;
+      height: 800px;
+      width: 400px;
+    }
+
+    .agenda-details {
+      display: flex;
+
+      &:before {
+        left: -210px;
+      }
+
+      .agenda-event {
+
+        &.event-2 .agenda-info, &.event-3 .agenda-info {
+          border-left: 1px solid #a0a9b4 !important;
+        }
+      }
+    }
+
+    .agenda-link {
+      font-weight: 400 !important;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .agenda-section {
+    .agenda-details {
+      &:before {
+        left: -320px;
+      }
+    }
+  }
+}

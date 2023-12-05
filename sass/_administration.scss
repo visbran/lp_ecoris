@@ -1,0 +1,188 @@
+.administration {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  header {
+
+    .filiere {
+      color: $darkgreen;
+    }
+
+    .blue-slash {
+      color: $darkgreen;
+    }
+  }
+
+  .logo-section {
+    background-color: $adminOrange;
+  }
+
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+
+  .banque-section {
+    background-color: $adminOrange;
+
+    .masqued-green {
+      svg {
+        fill: $redAdobe;
+      }
+    }
+
+    .white-smiley {
+      svg {
+        fill: $adminOrange !important;
+      }
+    }
+
+    .banque-content {
+      h1 {
+        &:after {
+          background: url("../img/administration-avenirs-augmentes.svg") no-repeat;
+          background-size: 105px;
+          right: -20px;
+          @media (min-width: 576px) {
+            background-size: 115px;
+            top: 166px !important;
+          }
+          @media (min-width: 768px) {
+            background-size: 120px;
+            top: 220px !important;
+            right: 0px;
+          }
+          @media (min-width: 992px) {
+            right: 20px;
+            background-size: 135px;
+            top: 120px !important;
+          }
+          @media (min-width: 1200px) {
+            top: 140px !important;
+          }
+        }
+      }
+
+      .blue-slash {
+        color: $darkgreen;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  .agenda-section {
+    background: linear-gradient(to right, $adminDarkGreen, $adminLightGreen);
+
+    &:after {
+      background: url("../img/admin-graduate-yellow-smiley.png") no-repeat;
+    }
+    .agenda-title {
+      &:before {
+        width: 185px!important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+
+  .formation-section {
+    background: linear-gradient(to right, $adminDarkGreen, $adminLightGreen);
+
+    .li-arrow {
+      svg {
+        fill: $darkgreen !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  .study-section {
+    .h2-study {
+      color: $adminLightGreen !important;
+    }
+
+    li:before {
+      color: $adminLightGreen !important;
+    }
+    .study-card{
+      @media (min-width: 992px) {
+        padding: 40px 40px 40px 175px;
+      }
+      @media (min-width: 1400px) {
+        padding: 40px 50px 40px 175px;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  .school-section {
+    background: linear-gradient(to right, $adminDarkGreen, $adminLightGreen);
+
+    &:before {
+      background-image: url("../img/admin-school-graduated.svg");
+    }
+
+    .h2-school {
+      color: $adminDarkGreen !important;
+    }
+
+    .card-tel {
+      svg {
+        stroke: $adminDarkGreen !important;
+      }
+
+      a:hover {
+        color: $adminOrange !important;
+
+        svg {
+          stroke: $adminOrange !important;
+        }
+      }
+    }
+
+    .card-mail {
+      a:hover {
+        color: $adminOrange !important;
+
+        svg {
+          fill: $adminOrange !important;
+        }
+      }
+    }
+
+    .card-insta {
+      a:hover {
+        color: $adminOrange !important;
+
+        svg {
+          fill: $adminOrange !important;
+        }
+      }
+    }
+
+    a {
+      color: $adminDarkGreen !important;
+
+      svg {
+        fill: $adminDarkGreen !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+
+  footer {
+    .social-links {
+      background-color: $adminOrange;
+    }
+  }
+}

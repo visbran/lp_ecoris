@@ -1,0 +1,45 @@
+@import "config";
+@import "header";
+@import "agenda-section";
+@import "banque-section";
+@import "formation-section";
+@import "study-section";
+@import "school-section";
+@import "footer";
+@import "administration";
+@import "immobilier";
+@import "commercial";
+@import "communication";
+@import "comptabilite";
+@import "bfa";
+@import "bac";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $white;
+  font-family: $f-primary !important;
+  font-size: 14px;
+  overflow-x: hidden;
+
+  main {
+    position: relative;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .blue-bullet {
+    list-style: none; /* Remove default bullets */
+    li::before {
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 1em; /* Also needed for space (tweak if needed) */
+      margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+  }
+}

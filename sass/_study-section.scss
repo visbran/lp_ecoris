@@ -1,0 +1,243 @@
+/**************************************/
+/*         SECTION - STUDY           */
+/**************************************/
+.study-section {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  position: relative;
+
+
+  .minute {
+    text-align: center;
+    color: $white;
+    background: $redAdobe;
+    transform: rotate(354deg) translate(-50%);
+    left: 50%;
+    width: 144px;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    top: -40px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+  }
+
+  .study-title {
+    text-align: center;
+
+
+    h1 {
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 0;
+    }
+
+    .h2-study {
+      margin-top: 10px;
+      line-height: 1;
+      color: $lightblue;
+      font-size: 24px;
+      padding-bottom: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .study-card {
+    padding: 0px 40px 40px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 50px #3B3B3B1A;
+    align-items: center;
+    margin-top: 60px;
+
+    .study-image {
+      text-align: center;
+      position: relative;
+      top: -50px;
+
+      img {
+        max-width: 80vw;
+      }
+    }
+
+    .study-text {
+      display: flex;
+      font-size: 16px;
+      font-family: $f-secondary;
+    }
+
+    .study-list {
+      display: block;
+
+      ul {
+        &:first-of-type {
+          margin-bottom: 0px;
+        }
+
+        font-size: 16px;
+        font-family: $f-secondary;
+        font-weight: 600;
+
+
+        li::before {
+          color: $lightblue;
+          content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+  .study-section {
+    h1 {
+      font-size: 35px !important;
+    }
+
+    h2 {
+      font-size: 30px !important;
+    }
+
+    .study-list {
+      display: flex !important;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .study-section {
+    .container {
+      padding: 0px 25px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 30px;
+      right: 0px;
+      width: 200px;
+      height: 320px;
+      background: url("../img/list-smiley.png") no-repeat;
+      background-size: 200px;
+    }
+
+    .study-card {
+      padding: 40px 40px 10px 175px;
+      margin-top: 20px;
+
+      .study-image {
+        display: none;
+      }
+
+      .study-text {
+        position: relative;
+
+        p:before {
+          position: absolute;
+          content: "";
+          background: url("../img/study-section.svg") no-repeat;
+          width: 384px;
+          height: 271px;
+          top: 0px;
+          left: -415px;
+          transform: scale(0.7);
+          transform-origin: top right;
+        }
+      }
+
+      .study-list {
+        display: flex;
+        justify-content: flex-start;
+
+        ul {
+          &:first-of-type {
+            padding-left: 25px;
+          }
+
+          &:last-of-type {
+            padding-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1076px) {
+  .study-section {
+    .study-card {
+      padding: 40px 40px 20px 175px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .study-section {
+    .study-card {
+      padding: 40px 40px 40px 175px;
+
+      .study-text {
+        p:before {
+          transform: scale(0.8);
+        }
+      }
+
+      .study-list {
+        ul:last-of-type {
+          padding-left: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1212px) {
+  .study-section {
+    .study-card {
+      padding: 40px 40px 50px 175px;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .study-section {
+    .study-card {
+      padding: 40px 50px 40px 125px;
+
+      .study-text {
+        p:before {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1700px) {
+  .study-section {
+    .study-card {
+
+      //padding: 40px 50px 130px 125px;
+
+      .study-text {
+        p:before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .study-section {
+    .study-card {
+      //padding: 40px 50px 150px 125px;
+    }
+  }
+}

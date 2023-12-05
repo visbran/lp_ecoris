@@ -1,0 +1,2123 @@
+@charset "UTF-8";
+/***********************************/
+/** Administration des entreprises */
+/***********************************/
+/***********************************/
+/**           Immobilier           */
+/***********************************/
+/***********************************/
+/**           Commercial           */
+/***********************************/
+/***********************************/
+/**  Communication Digitale        */
+/***********************************/
+/***********************************/
+/**  Comptabilité                  */
+/***********************************/
+/***************/
+/* bootstrap breakpoints */
+/* xs <576px */
+/* sm >=576px */
+/* md >=768px */
+/* lg >=992px */
+/* xl >=1200px */
+/* xxl >=1400px */
+/***********************************/
+/*        Fonts                     /
+/***********************************/
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro.otf") format("otf"), url("../font/Intro/intro-webfont.woff") format("woff"), url("../font/Intro/intro-webfont.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro-Black.otf") format("otf"), url("../font/Intro/intro_black-webfont.woff") format("woff"), url("../font/Intro/intro_black-webfont.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro-Black-Alt.otf") format("otf"), url("../font/Intro/intro_black_alt-webfont.woff") format("woff"), url("../font/Intro/intro_black_alt-webfont.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro-Bold.otf") format("otf"), url("../font/Intro/intro_bold-webfont.woff") format("woff"), url("../font/Intro/intro_bold-webfont.woff2") format("woff2");
+  font-weight: 900;
+}
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro-Book.otf") format("otf"), url("../font/Intro/intro_book-webfont.woff") format("woff"), url("../font/Intro/intro_book-webfont.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro-Inline.otf") format("otf"), url("../font/Intro/intro_inline-webfont.woff") format("woff"), url("../font/Intro/intro_inline-webfont.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro-Light.otf") format("otf"), url("../font/Intro/intro_light-webfont.woff") format("woff"), url("../font/Intro/intro_light-webfont.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Intro;
+  src: url("../font/Intro/Intro-Light-Caps.otf") format("otf"), url("../font/Intro/intro_light_caps-webfont.woff") format("woff"), url("../font/Intro/intro_light_caps-webfont.woff2") format("woff2");
+  font-weight: 300;
+}
+@font-face {
+  font-family: Myriad-Pro;
+  src: url("../font/Myriad-Pro/Myriad-Pro-Black_31623.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: Myriad-Pro;
+  src: url("../font/Myriad-Pro/Myriad-Pro-Bold-Italic_31626.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: Myriad-Pro;
+  src: url("../font/Myriad-Pro/Myriad-Pro_31655.ttf") format("truetype");
+  font-weight: 400;
+}
+a, svg, .download-button, .formation-button, .header-button, .footer-button {
+  transition: 200ms ease;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1210px;
+  }
+}
+/**************************************/
+/*        HEADER                      */
+/**************************************/
+header {
+  display: none;
+}
+
+.logo-section {
+  background-color: #ffca05;
+  text-align: center;
+  margin-bottom: -1px;
+}
+.logo-section .logo-header {
+  margin-top: 30px;
+  width: 200px;
+}
+
+@media (min-width: 1200px) {
+  header.sticky {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    background: #ffffff;
+    align-items: center;
+    padding: 10px 0px;
+    max-height: fit-content;
+  }
+  header.sticky img {
+    width: 100px;
+    margin-left: 20px;
+  }
+  header.sticky .header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header.sticky .filiere {
+    font-family: "Myriad-Pro", sans-serif;
+    font-size: 18px;
+    color: #009DE2;
+    text-align: right;
+    padding-right: 20px;
+  }
+  header.sticky h1 {
+    font-size: 28px;
+    text-align: center;
+    margin: 0px;
+    font-weight: bold;
+  }
+  header.sticky h1 span {
+    color: #009DE2;
+  }
+  header.sticky .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  header.sticky .buttons .header-button {
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 10px 13px;
+    margin: 10px;
+    position: relative;
+  }
+  header.sticky .buttons .header-button a {
+    font-size: 12px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  header.sticky .buttons .header-button a svg {
+    width: 15px;
+    margin-right: 5px;
+  }
+  header.sticky .buttons .header-button a .show-on-big-screen {
+    display: none;
+  }
+  header.sticky .buttons .header-button:hover {
+    background-color: #FF0552;
+  }
+}
+@media (min-width: 1518px) {
+  header.sticky .download-button .show-on-big-screen {
+    display: inherit !important;
+  }
+}
+/**************************************/
+/*         SECTION - AGENDA           */
+/**************************************/
+.agenda-section {
+  margin-bottom: -1px;
+  background: linear-gradient(to right, #007dc4, #0094d9);
+  position: relative;
+  padding-top: 70px;
+}
+.agenda-section:after {
+  content: "";
+  background: url("../img/graduate-red-smiley(1).png") no-repeat;
+  background-size: 200px !important;
+  height: 400px;
+  width: 200px;
+  position: absolute;
+  top: -55px;
+  right: 0px;
+}
+.agenda-section .agenda-title {
+  background-color: #000000;
+  border-radius: 8px 8px 0px 0px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  margin-top: 85px;
+}
+.agenda-section .agenda-title h2 {
+  margin: 0px;
+  font-weight: bold;
+}
+.agenda-section .notes {
+  display: none;
+}
+.agenda-section .agenda-details {
+  background-color: #ffffff;
+  display: block;
+  justify-content: center;
+  border-radius: 0px 0px 5px 5px;
+  padding: 10px;
+  position: relative;
+}
+.agenda-section .agenda-details:before {
+  content: "";
+  background: url("../img/blacksmiley.svg");
+  background-size: 60px;
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: -30px;
+  left: -300px;
+}
+.agenda-section .agenda-details .agenda-event {
+  padding: 0px 20px 0px 0px;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-date {
+  line-height: 1.1;
+  text-align: center;
+  background-color: #ffca05;
+  color: #ffffff;
+  border-radius: 1px;
+  padding: 10px 10px;
+  margin: 10px;
+  font-weight: bold;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-date p {
+  margin: 0px;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-date .date-number {
+  font-size: 24px;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-date .month {
+  font-size: 14px;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-texte {
+  line-height: 1.1;
+  font-family: "Myriad-Pro", sans-serif;
+  font-size: 15px;
+}
+.agenda-section .agenda-details .agenda-event .agenda-links {
+  text-align: right;
+  padding-right: 15px;
+  position: relative;
+  top: -15px;
+}
+.agenda-section .agenda-details .agenda-event .agenda-links .agenda-link {
+  font-weight: 700;
+  color: #FF0552;
+  text-transform: uppercase;
+  font-size: 11px;
+  text-decoration: none;
+  text-align: right;
+}
+.agenda-section .agenda-details .agenda-event .agenda-links .agenda-link:hover {
+  color: #009DE2;
+}
+.agenda-section .agenda-details .agenda-event .agenda-links .agenda-link:hover svg {
+  fill: #009DE2;
+}
+.agenda-section .agenda-details .agenda-event .agenda-links .agenda-link svg {
+  fill: #FF0552;
+  vertical-align: baseline;
+  margin-left: 20px;
+}
+
+@media (min-width: 768px) {
+  .agenda-section .agenda-title {
+    position: relative;
+  }
+  .agenda-section .agenda-title:before {
+    content: "";
+    background: url("../img/take_note.svg") no-repeat;
+    width: 200px;
+    height: 153px;
+    position: absolute;
+    top: 35px;
+    left: -220px;
+    z-index: 1;
+  }
+  .agenda-section .agenda-details.before {
+    top: -100px;
+    left: -207px;
+  }
+}
+@media (min-width: 992px) {
+  .agenda-section {
+    padding-top: 0px;
+  }
+  .agenda-section:after {
+    top: -200px;
+  }
+  .agenda-section .agenda-title {
+    margin-top: 180px;
+  }
+}
+@media (min-width: 1200px) {
+  .agenda-section:after {
+    top: -400px;
+    background-size: 400px !important;
+    height: 800px;
+    width: 400px;
+  }
+  .agenda-section .agenda-details {
+    display: flex;
+  }
+  .agenda-section .agenda-details:before {
+    left: -210px;
+  }
+  .agenda-section .agenda-details .agenda-event.event-2 .agenda-info, .agenda-section .agenda-details .agenda-event.event-3 .agenda-info {
+    border-left: 1px solid #a0a9b4 !important;
+  }
+  .agenda-section .agenda-link {
+    font-weight: 400 !important;
+  }
+}
+@media (min-width: 1400px) {
+  .agenda-section .agenda-details:before {
+    left: -320px;
+  }
+}
+/**************************************/
+/*         SECTION - BANQUE           */
+/**************************************/
+.banque-section {
+  background-color: #ffca05;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.banque-section .graduated-white {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+}
+.banque-section .graduated-white svg {
+  fill: #fbfbfb;
+}
+.banque-section .masqued-green {
+  position: absolute;
+  right: 0px;
+  top: -7px;
+}
+.banque-section .masqued-green svg {
+  fill: #00903E;
+  width: 77px;
+  height: 77px;
+}
+.banque-section .white-smiley {
+  position: absolute;
+  right: 180px;
+  top: 120px;
+}
+.banque-section .white-smiley svg {
+  fill: #ffca05;
+}
+.banque-section .banque-content {
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 85px 30px 40px 30px;
+  position: relative;
+  top: 70px;
+  hyphens: auto;
+  word-wrap: break-word;
+  z-index: 2;
+}
+.banque-section .banque-content .filieres {
+  text-align: center;
+  color: #ffffff;
+  background: #FF0552;
+  transform: rotate(354deg) translate(-50%);
+  left: 65px;
+  width: 90px;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  top: -25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.banque-section .banque-content h1 {
+  font-family: "Intro", sans-serif;
+  font-weight: 900;
+  font-size: 25px;
+  line-height: 1;
+}
+.banque-section .banque-content h1:after {
+  content: "";
+  background: url("../img/avenirs-augmentes.svg") no-repeat;
+  background-size: 115px;
+  height: 75px;
+  width: 145px;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+}
+.banque-section .banque-content .blue-slash {
+  color: #007dc4;
+}
+.banque-section .banque-content .banque-p1 {
+  font-size: 15px;
+}
+.banque-section .banque-content .banque-p2 {
+  font-family: "Myriad-Pro", sans-serif;
+  font-size: 14px;
+}
+
+@media (min-width: 576px) {
+  .banque-section .banque-content {
+    padding: 45px 50px 80px 50px;
+  }
+  .banque-section .banque-content h1 {
+    font-size: 40px !important;
+    margin-bottom: 40px;
+  }
+  .banque-section .banque-content h1:after {
+    top: 90px !important;
+    background-size: 115px;
+    right: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .banque-section .banque-content h1 {
+    font-size: 40px !important;
+    width: 80%;
+    margin-bottom: 0.5rem;
+  }
+  .banque-section .banque-content h1:after {
+    top: 70px !important;
+  }
+  .banque-section .banque-content .filieres {
+    left: 120px;
+  }
+}
+@media (min-width: 992px) {
+  .banque-section .masqued-green {
+    position: absolute;
+    right: 65px;
+    top: -13px;
+  }
+  .banque-section .banque-content .banque-p1 {
+    font-size: 20px !important;
+  }
+  .banque-section .banque-content .banque-p2 {
+    font-size: 18px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .banque-section .masqued-green {
+    right: 120px;
+  }
+  .banque-section .banque-content h1 {
+    font-size: 60px !important;
+  }
+  .banque-section .banque-content h1:after {
+    top: 45px !important;
+  }
+  .banque-section .banque-content .banque-p1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .banque-section .banque-content .banque-p2 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 1400px) {
+  .banque-section .banque-content .filieres {
+    left: 120px;
+  }
+}
+@media (min-width: 1600px) {
+  .banque-section .banque-content .filieres {
+    left: 120px;
+  }
+}
+/**************************************/
+/*         SECTION - FORMATION           */
+/**************************************/
+.formation-section {
+  padding-top: 100px;
+  background: linear-gradient(to right, #007dc4, #0094d9);
+  position: relative;
+}
+.formation-section .formation-head {
+  justify-content: center;
+}
+.formation-section .formation-head h1 {
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.formation-section .formation-cards {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.formation-section .formation-cards h2 {
+  margin: 0;
+  font-weight: bold;
+}
+.formation-section .formation-cards .formation-card-pad {
+  padding: 10px 5px 30px 5px;
+}
+.formation-section .formation-cards .formation-card {
+  min-height: 100%;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  position: relative;
+  padding: 0px;
+}
+.formation-section .formation-cards .formation-card .formation-title {
+  border-radius: 10px 10px 0px 0px;
+  text-align: center;
+  height: 20px;
+  font-weight: bold;
+}
+.formation-section .formation-cards .formation-card .formation-title .h2-formation {
+  position: relative;
+  top: -20px;
+  font-size: 40px;
+  font-family: "Intro", sans-serif;
+}
+.formation-section .formation-cards .formation-card .formation-title-one {
+  background-color: #FF0552;
+}
+.formation-section .formation-cards .formation-card .formation-title-two {
+  background-color: #ffca05;
+}
+.formation-section .formation-cards .formation-card .formation-title-three {
+  background-color: #71be44;
+}
+.formation-section .formation-cards .formation-card .formation-list {
+  padding: 20px 0px 20px 0px;
+}
+.formation-section .formation-cards .formation-card .formation-list ul {
+  padding-right: 2rem;
+}
+.formation-section .formation-cards .formation-card .formation-list ul li {
+  font-family: "Myriad-Pro", sans-serif;
+  font-size: 20px;
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+.formation-section .formation-cards .formation-card .formation-list ul li .li-arrow {
+  margin-right: 20px;
+}
+.formation-section .formation-cards .formation-card .formation-list ul li .li-arrow svg {
+  fill: #0094d9;
+  vertical-align: unset;
+}
+.formation-section .formation-cards .formation-card .formation-list ul li .li-text {
+  line-height: 1;
+}
+.formation-section .formation-buttons {
+  justify-content: center;
+  padding: 20px 0px 20px 0px;
+  margin: 0px;
+}
+.formation-section .formation-buttons .formation-button {
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 10px 21px;
+  margin: 10px;
+  position: relative;
+  text-align: center;
+}
+.formation-section .formation-buttons .formation-button a {
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+.formation-section .formation-buttons .formation-button.download-button svg {
+  margin-right: 10px;
+  margin-top: -7px;
+}
+.formation-section .formation-buttons .formation-button:hover {
+  background-color: #FF0552;
+}
+.formation-section .reconnaissance {
+  text-align: center;
+  color: #ffffff;
+  padding-bottom: 100px;
+  padding-top: 44px;
+  font-size: 16px;
+}
+.formation-section .reconnaissance .reconnaissance-de {
+  font-weight: bold;
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+.formation-section .reconnaissance .reconnaissance-level {
+  font-family: "Myriad-Pro", sans-serif;
+  font-size: 16px;
+}
+
+@media (min-width: 576px) {
+  .formation-section .formation-head-title h1 {
+    font-size: 35px;
+  }
+  .formation-section .formation-buttons {
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .formation-section .formation-head {
+    margin: 0px;
+  }
+  .formation-section h1 {
+    display: flex !important;
+    position: relative;
+  }
+  .formation-section h1 .formation-head-title {
+    width: fit-content;
+  }
+  .formation-section h1 .formation-head-title:after {
+    content: "";
+    background: url("../img/all-level.svg") no-repeat;
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    margin-left: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .formation-section .h2-formation {
+    font-size: 65px;
+  }
+  .formation-section h1:after {
+    overflow: hidden;
+    right: -2px;
+    top: 17px;
+  }
+  .formation-section .formation-button {
+    padding: 10px 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .formation-section h1 .formation-head-title:after {
+    top: -10px;
+  }
+}
+@media (min-width: 1400px) {
+  .formation-section .formation-title .h2-formation {
+    font-size: 65px !important;
+    top: -41px !important;
+  }
+}
+/**************************************/
+/*         SECTION - STUDY           */
+/**************************************/
+.study-section {
+  padding-top: 70px;
+  padding-bottom: 80px;
+  position: relative;
+}
+.study-section .minute {
+  text-align: center;
+  color: #ffffff;
+  background: #FF0552;
+  transform: rotate(354deg) translate(-50%);
+  left: 50%;
+  width: 144px;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+  position: absolute;
+  top: -40px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1;
+}
+.study-section .study-title {
+  text-align: center;
+}
+.study-section .study-title h1 {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0;
+}
+.study-section .study-title .h2-study {
+  margin-top: 10px;
+  line-height: 1;
+  color: #0094d9;
+  font-size: 24px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+.study-section .study-card {
+  padding: 0px 40px 40px 40px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 50px rgba(59, 59, 59, 0.1019607843);
+  align-items: center;
+  margin-top: 60px;
+}
+.study-section .study-card .study-image {
+  text-align: center;
+  position: relative;
+  top: -50px;
+}
+.study-section .study-card .study-image img {
+  max-width: 80vw;
+}
+.study-section .study-card .study-text {
+  display: flex;
+  font-size: 16px;
+  font-family: "Myriad-Pro", sans-serif;
+}
+.study-section .study-card .study-list {
+  display: block;
+}
+.study-section .study-card .study-list ul {
+  font-size: 16px;
+  font-family: "Myriad-Pro", sans-serif;
+  font-weight: 600;
+}
+.study-section .study-card .study-list ul:first-of-type {
+  margin-bottom: 0px;
+}
+.study-section .study-card .study-list ul li::before {
+  color: #0094d9;
+  content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+}
+
+@media (min-width: 768px) {
+  .study-section h1 {
+    font-size: 35px !important;
+  }
+  .study-section h2 {
+    font-size: 30px !important;
+  }
+  .study-section .study-list {
+    display: flex !important;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 992px) {
+  .study-section .container {
+    padding: 0px 25px;
+  }
+  .study-section:after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    width: 200px;
+    height: 320px;
+    background: url("../img/list-smiley.png") no-repeat;
+    background-size: 200px;
+  }
+  .study-section .study-card {
+    padding: 40px 40px 10px 175px;
+    margin-top: 20px;
+  }
+  .study-section .study-card .study-image {
+    display: none;
+  }
+  .study-section .study-card .study-text {
+    position: relative;
+  }
+  .study-section .study-card .study-text p:before {
+    position: absolute;
+    content: "";
+    background: url("../img/study-section.svg") no-repeat;
+    width: 384px;
+    height: 271px;
+    top: 0px;
+    left: -415px;
+    transform: scale(0.7);
+    transform-origin: top right;
+  }
+  .study-section .study-card .study-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .study-section .study-card .study-list ul:first-of-type {
+    padding-left: 25px;
+  }
+  .study-section .study-card .study-list ul:last-of-type {
+    padding-left: 60px;
+  }
+}
+@media (min-width: 1076px) {
+  .study-section .study-card {
+    padding: 40px 40px 20px 175px;
+  }
+}
+@media (min-width: 1200px) {
+  .study-section .study-card {
+    padding: 40px 40px 40px 175px;
+  }
+  .study-section .study-card .study-text p:before {
+    transform: scale(0.8);
+  }
+  .study-section .study-card .study-list ul:last-of-type {
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1212px) {
+  .study-section .study-card {
+    padding: 40px 40px 50px 175px;
+  }
+}
+@media (min-width: 1400px) {
+  .study-section .study-card {
+    padding: 40px 50px 40px 125px;
+  }
+  .study-section .study-card .study-text p:before {
+    transform: scale(0.9);
+  }
+}
+@media (min-width: 1700px) {
+  .study-section .study-card .study-text p:before {
+    transform: scale(1);
+  }
+}
+/**************************************/
+/*         SECTION - SCHOOL           */
+/**************************************/
+.school-section {
+  padding-top: 62px;
+  background: linear-gradient(to right, #007dc4, #0094d9);
+  position: relative;
+}
+.school-section:before {
+  content: "";
+  position: absolute;
+  top: -113px;
+  left: -25px;
+  width: 170px;
+  height: 170px;
+  background-image: url("../img/graduate-red-smiley.svg");
+  background-size: 170px;
+}
+.school-section .school-masqued-smiley {
+  position: absolute;
+  bottom: 100px;
+  left: 73px;
+  width: 57px;
+  height: 57px;
+  fill: #ffcb05;
+}
+.school-section .school-smiley {
+  position: absolute;
+  right: 42px;
+  top: 185px;
+  width: 78px;
+  height: 78px;
+  fill: #ffcb05;
+}
+.school-section h1 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}
+.school-section .school-choice {
+  display: none;
+}
+.school-section .school-cards {
+  justify-content: center;
+  padding-bottom: 115px;
+  padding-top: 35px;
+  position: relative;
+}
+.school-section .school-cards .school-card {
+  border-radius: 5px;
+  background: #ffffff padding-box;
+  margin: 10px 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3019607843);
+  padding: 0px;
+}
+.school-section .school-cards .school-card .school-chambery-img {
+  background: url("../img/CHAMBERY.jpg") no-repeat;
+}
+.school-section .school-cards .school-card .school-annecy-img {
+  background: url("../img/ANNECY.jpg") no-repeat;
+}
+.school-section .school-cards .school-card .school-lyon-img {
+  background: url("../img/LYON.jpg") no-repeat;
+}
+.school-section .school-cards .school-card .school-annemasse-img {
+  background: url("../img/ANNEMASSE.jpg") no-repeat;
+}
+.school-section .school-cards .school-card .school-grenoble-img {
+  background: url("../img/GRENOBLE.png") no-repeat;
+}
+.school-section .school-cards .school-card .school-card-img {
+  background-size: cover;
+  height: 160px;
+}
+.school-section .school-cards .school-card img {
+  border-radius: 5px 5px 0px 0px;
+  max-width: 100%;
+}
+.school-section .school-cards .school-card .text-card {
+  padding: 20px;
+}
+.school-section .school-cards .school-card .text-card .h2-school {
+  text-transform: uppercase;
+  color: #0094d9;
+  font-size: 22px;
+  font-weight: bold;
+}
+.school-section .school-cards .school-card .text-card .card-text {
+  font-family: "Myriad-Pro", sans-serif;
+  font-size: 14px;
+}
+.school-section .school-cards .school-card .text-card .card-tel {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Myriad-Pro", sans-serif;
+}
+.school-section .school-cards .school-card .text-card .card-tel a:hover {
+  color: #ffca05;
+}
+.school-section .school-cards .school-card .text-card .card-tel a:hover svg {
+  stroke: #ffca05;
+}
+.school-section .school-cards .school-card .text-card .card-tel svg {
+  stroke: #0094d9;
+}
+.school-section .school-cards .school-card .text-card .card-mail {
+  font-size: 13px;
+  font-weight: 700;
+}
+.school-section .school-cards .school-card .text-card .card-mail span {
+  vertical-align: middle;
+}
+.school-section .school-cards .school-card .text-card .card-mail .mail-icon {
+  vertical-align: middle;
+}
+.school-section .school-cards .school-card .text-card .card-mail a:hover {
+  color: #ffca05;
+}
+.school-section .school-cards .school-card .text-card .card-mail a:hover svg {
+  fill: #ffca05;
+}
+.school-section .school-cards .school-card .text-card .card-insta svg {
+  width: 16px;
+  fill: #0094d9;
+}
+.school-section .school-cards .school-card .text-card .card-insta span {
+  vertical-align: middle;
+}
+.school-section .school-cards .school-card .text-card .card-insta a:hover {
+  color: #ffca05;
+}
+.school-section .school-cards .school-card .text-card .card-insta a:hover svg {
+  fill: #ffca05;
+}
+.school-section .school-cards .school-card .text-card a {
+  text-decoration: none;
+  color: #0094d9;
+}
+.school-section .school-cards .school-card .text-card a svg {
+  fill: #0094d9;
+}
+
+@media (min-width: 768px) {
+  .school-section {
+    position: relative;
+  }
+  .school-section .our-schools:after {
+    content: "";
+    background: no-repeat url("../img/just-choose.svg");
+    height: 100px;
+    width: 250px;
+    position: absolute;
+    margin-left: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .school-section:before {
+    top: -64px;
+  }
+  .school-section .card-mail {
+    font-weight: 400 !important;
+  }
+}
+@media (min-width: 1400px) {
+  .school-section .school-cards {
+    justify-content: space-between;
+  }
+  .school-section .school-card {
+    min-width: 19%;
+  }
+  .school-section .school-card .text-card {
+    padding: 20px 16px !important;
+  }
+  .school-section .school-card:last-of-type:after {
+    right: -120px !important;
+  }
+}
+/**************************************/
+/*         FOOTER                     */
+/**************************************/
+footer {
+  position: relative;
+}
+
+/**************************************/
+/*         FOOTER - SOCIAL LINKS      */
+/**************************************/
+.social-links {
+  background-color: #ffca05;
+  text-align: center;
+  padding: 29px 0px 40px 0px;
+  position: relative;
+}
+.social-links:after {
+  content: "";
+  position: absolute;
+  width: 72px;
+  height: 73px;
+  background-image: url("../img/blacksmiley.svg");
+  background-size: 72px;
+  right: 20px;
+  bottom: 10px;
+}
+.social-links h1 {
+  font-family: "Myriad-Pro", sans-serif;
+  font-size: 20px;
+  margin-bottom: 21px;
+}
+.social-links h2 {
+  display: none;
+}
+.social-links a {
+  width: 92px;
+  margin-bottom: 48px;
+}
+.social-links a svg #Tracé_161 {
+  fill: #45619d;
+}
+.social-links a svg #fb {
+  fill: #ffffff;
+}
+.social-links a svg:hover #Tracé_161 {
+  fill: #ffffff;
+}
+.social-links a svg:hover #fb {
+  fill: #45619d;
+}
+.social-links a.linkedin-link svg {
+  transform: rotate(15deg);
+  margin-left: 10px;
+}
+.social-links a.linkedin-link svg #Ellipse_32, .social-links a.linkedin-link svg #Rectangle_37, .social-links a.linkedin-link svg #Tracé_170 {
+  fill: #ffffff;
+}
+.social-links a.linkedin-link svg #Tracé_162 {
+  fill: #007bb5;
+}
+.social-links a.linkedin-link svg:hover #Ellipse_32, .social-links a.linkedin-link svg:hover #Rectangle_37, .social-links a.linkedin-link svg:hover #Tracé_170 {
+  fill: #007bb5;
+}
+.social-links a.linkedin-link svg:hover #Tracé_162 {
+  fill: #ffffff;
+}
+.social-links a.instagram-link svg {
+  width: 97px;
+  height: 92px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.social-links a.instagram-link svg #Tracé_163 {
+  fill: url("#Degrade_sans_nom");
+}
+.social-links a.instagram-link svg #Tracé_167, .social-links a.instagram-link svg #Tracé_168, .social-links a.instagram-link svg #Ellipse_31 {
+  fill: #ffffff;
+}
+.social-links a.instagram-link svg:hover #Tracé_163 {
+  fill: #ffffff;
+}
+.social-links a.instagram-link svg:hover #Tracé_167, .social-links a.instagram-link svg:hover #Tracé_168, .social-links a.instagram-link svg:hover #Ellipse_31 {
+  fill: url("#Degrade_sans_nom");
+}
+
+/**************************************/
+/*         FOOTER - COPYRIGHTS        */
+/**************************************/
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Myriad-Pro", sans-serif;
+  font-size: 14px;
+  padding: 70px 0px 55px 0px;
+  margin-bottom: 20px;
+}
+.copyright:before {
+  background-image: url("../img/ECORIS_NEW_LOGO.png");
+  background-size: 100px;
+  position: absolute;
+  left: auto;
+  bottom: 90px;
+  margin: 0 auto;
+  content: "";
+  width: 100px;
+  height: 40px;
+}
+.copyright a {
+  color: #000000 !important;
+}
+.copyright a:hover {
+  color: #009DE2 !important;
+}
+
+/**************************************/
+/*         footer - buttons           */
+/**************************************/
+#footer-buttons {
+  z-index: 3000;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  background: white;
+}
+#footer-buttons .footer-button {
+  background-color: #000000;
+  border-radius: 5px;
+  padding: 10px 13px;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+#footer-buttons .footer-button a {
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+#footer-buttons .footer-button a svg {
+  width: 15px;
+  margin-right: 5px;
+}
+#footer-buttons .footer-button a .button-full-text {
+  display: none;
+}
+#footer-buttons .footer-button:hover {
+  background-color: #FF0552;
+}
+
+@media (min-width: 768px) {
+  footer .social-icons {
+    position: relative;
+  }
+  footer .social-links:after {
+    bottom: 20px;
+    right: 40px;
+  }
+  footer #footer-buttons a {
+    display: flex;
+  }
+  footer #footer-buttons a .button-full-text {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) {
+  footer .social-icons:before {
+    content: "";
+    background: no-repeat url("../img/stay-connected.svg");
+    width: 280px;
+    position: absolute;
+    height: 100px;
+    margin-left: -470px;
+  }
+  footer .copyright {
+    padding-top: 30px;
+  }
+  footer .copyright:before {
+    left: 200px;
+    bottom: 40px;
+    margin: 0px;
+    background-size: 130px;
+    width: 130px;
+    height: 55px;
+  }
+  footer .social-links:after {
+    bottom: 30px;
+    right: 60px;
+  }
+  footer #footer-buttons {
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  footer .copyright {
+    margin-bottom: 0px;
+  }
+  footer .social-icons:before {
+    width: 350px;
+    height: 100px;
+    margin-left: -537px;
+  }
+  footer .social-links:after {
+    right: 150px;
+  }
+}
+@media (min-width: 1400px) {
+  footer .social-icons:before {
+    content: "";
+    background: no-repeat url("../img/stay-connected.svg");
+    width: 380px;
+    position: absolute;
+    margin-left: -585px;
+  }
+}
+.administration {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+}
+.administration header .filiere {
+  color: #00a66c;
+}
+.administration header .blue-slash {
+  color: #00a66c;
+}
+.administration .logo-section {
+  background-color: #F9A51A;
+}
+.administration .banque-section {
+  background-color: #F9A51A;
+}
+.administration .banque-section .masqued-green svg {
+  fill: #FF0552;
+}
+.administration .banque-section .white-smiley svg {
+  fill: #F9A51A !important;
+}
+.administration .banque-section .banque-content h1:after {
+  background: url("../img/administration-avenirs-augmentes.svg") no-repeat;
+  background-size: 105px;
+  right: -20px;
+}
+@media (min-width: 576px) {
+  .administration .banque-section .banque-content h1:after {
+    background-size: 115px;
+    top: 166px !important;
+  }
+}
+@media (min-width: 768px) {
+  .administration .banque-section .banque-content h1:after {
+    background-size: 120px;
+    top: 220px !important;
+    right: 0px;
+  }
+}
+@media (min-width: 992px) {
+  .administration .banque-section .banque-content h1:after {
+    right: 20px;
+    background-size: 135px;
+    top: 120px !important;
+  }
+}
+@media (min-width: 1200px) {
+  .administration .banque-section .banque-content h1:after {
+    top: 140px !important;
+  }
+}
+.administration .banque-section .banque-content .blue-slash {
+  color: #00a66c;
+}
+.administration .agenda-section {
+  background: linear-gradient(to right, #0B9666, #00A66C);
+}
+.administration .agenda-section:after {
+  background: url("../img/admin-graduate-yellow-smiley.png") no-repeat;
+}
+.administration .agenda-section .agenda-title:before {
+  width: 185px !important;
+}
+.administration .formation-section {
+  background: linear-gradient(to right, #0B9666, #00A66C);
+}
+.administration .formation-section .li-arrow svg {
+  fill: #00a66c !important;
+}
+.administration .study-section .h2-study {
+  color: #00A66C !important;
+}
+.administration .study-section li:before {
+  color: #00A66C !important;
+}
+@media (min-width: 992px) {
+  .administration .study-section .study-card {
+    padding: 40px 40px 40px 175px;
+  }
+}
+@media (min-width: 1400px) {
+  .administration .study-section .study-card {
+    padding: 40px 50px 40px 175px;
+  }
+}
+.administration .school-section {
+  background: linear-gradient(to right, #0B9666, #00A66C);
+}
+.administration .school-section:before {
+  background-image: url("../img/admin-school-graduated.svg");
+}
+.administration .school-section .h2-school {
+  color: #0B9666 !important;
+}
+.administration .school-section .card-tel svg {
+  stroke: #0B9666 !important;
+}
+.administration .school-section .card-tel a:hover {
+  color: #F9A51A !important;
+}
+.administration .school-section .card-tel a:hover svg {
+  stroke: #F9A51A !important;
+}
+.administration .school-section .card-mail a:hover {
+  color: #F9A51A !important;
+}
+.administration .school-section .card-mail a:hover svg {
+  fill: #F9A51A !important;
+}
+.administration .school-section .card-insta a:hover {
+  color: #F9A51A !important;
+}
+.administration .school-section .card-insta a:hover svg {
+  fill: #F9A51A !important;
+}
+.administration .school-section a {
+  color: #0B9666 !important;
+}
+.administration .school-section a svg {
+  fill: #0B9666 !important;
+}
+.administration footer .social-links {
+  background-color: #F9A51A;
+}
+
+.immobilier {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+}
+.immobilier header .filiere {
+  color: #504A9E;
+}
+.immobilier .banque-section .masqued-green svg {
+  fill: #504A9E;
+}
+.immobilier .banque-section .banque-content h1:after {
+  background: url("../img/immo-avenirs-augmentes.svg") no-repeat;
+  background-size: 100px;
+  right: -20px;
+  top: 20px !important;
+}
+@media (min-width: 768px) {
+  .immobilier .banque-section .banque-content h1:after {
+    background-size: 120px;
+    top: 20px !important;
+  }
+}
+@media (min-width: 992px) {
+  .immobilier .banque-section .banque-content h1:after {
+    background-size: 140px;
+    right: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .immobilier .banque-section .banque-content h1:after {
+    background-size: 140px;
+    right: 40px;
+    top: 25px !important;
+  }
+}
+.immobilier .agenda-section {
+  background: linear-gradient(to right, #504A9E, #6660BF);
+}
+.immobilier .agenda-section:after {
+  top: -360px;
+}
+.immobilier .agenda-section .agenda-link:hover {
+  color: #504A9E !important;
+}
+.immobilier .agenda-section .agenda-link:hover svg {
+  fill: #504A9E !important;
+}
+.immobilier .formation-section {
+  background: linear-gradient(to right, #504A9E, #6660BF);
+}
+.immobilier .formation-section .li-arrow svg {
+  fill: #504A9E !important;
+}
+.immobilier .study-section .h2-study {
+  color: #504A9E !important;
+}
+.immobilier .study-section li:before {
+  color: #504A9E !important;
+}
+.immobilier .school-section {
+  background: linear-gradient(to right, #504A9E, #6660BF);
+}
+.immobilier .school-section .h2-school {
+  color: #504A9E !important;
+}
+.immobilier .school-section .card-tel svg {
+  stroke: #504A9E !important;
+}
+.immobilier .school-section .card-tel a:hover {
+  color: #ffca05 !important;
+}
+.immobilier .school-section .card-tel a:hover svg {
+  stroke: #ffca05 !important;
+}
+.immobilier .school-section .card-mail a:hover {
+  color: #ffca05 !important;
+}
+.immobilier .school-section .card-mail a:hover svg {
+  fill: #ffca05 !important;
+}
+.immobilier .school-section .card-insta a:hover {
+  color: #ffca05 !important;
+}
+.immobilier .school-section .card-insta a:hover svg {
+  fill: #ffca05 !important;
+}
+.immobilier .school-section a {
+  color: #504A9E !important;
+}
+.immobilier .school-section a svg {
+  fill: #504A9E !important;
+}
+.commercial {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+}
+.commercial header .filiere {
+  color: #926EB2;
+}
+.commercial header .blue-slash {
+  color: #926EB2;
+}
+.commercial .logo-section {
+  background: #FF0552;
+}
+.commercial .banque-section {
+  background-color: #FF0552;
+}
+.commercial .banque-section .masqued-green svg {
+  fill: #ffca05;
+}
+.commercial .banque-section .graduated-white svg {
+  fill: #ffca05;
+}
+.commercial .banque-section .white-smiley svg {
+  fill: #FF0552;
+}
+.commercial .banque-section .banque-content .filieres {
+  background: #504A9E;
+}
+.commercial .banque-section .banque-content h1:after {
+  background: url("../img/commerce-avenirs-augmentes.svg") no-repeat;
+  background-size: 105px;
+  right: -10px;
+}
+@media (min-width: 576px) {
+  .commercial .banque-section .banque-content h1:after {
+    background-size: 115px;
+    top: 20px !important;
+  }
+}
+@media (min-width: 768px) {
+  .commercial .banque-section .banque-content h1:after {
+    background-size: 120px;
+    right: 10px;
+  }
+}
+@media (min-width: 992px) {
+  .commercial .banque-section .banque-content h1:after {
+    right: 40px;
+    background-size: 135px;
+  }
+}
+@media (min-width: 1200px) {
+  .commercial .banque-section .banque-content h1:after {
+    top: 25px !important;
+  }
+}
+.commercial .banque-section .banque-content h1 .blue-slash {
+  color: #926EB2;
+}
+.commercial .agenda-section {
+  background: linear-gradient(to right, #926EB2, #A98DC2);
+}
+.commercial .agenda-section:after {
+  background: url("../img/commerce-graduate-violet-smiley.png") no-repeat;
+}
+.commercial .agenda-section .agenda-link:hover {
+  color: #926EB2 !important;
+}
+.commercial .agenda-section .agenda-link:hover svg {
+  fill: #926EB2 !important;
+}
+.commercial .formation-section {
+  background: linear-gradient(to right, #926EB2, #A98DC2);
+}
+.commercial .formation-section .li-arrow svg {
+  fill: #926EB2 !important;
+}
+.commercial .study-section .h2-study {
+  color: #A98DC2 !important;
+}
+.commercial .study-section li:before {
+  color: #504A9E !important;
+}
+.commercial .school-section {
+  background: linear-gradient(to right, #926EB2, #A98DC2);
+}
+.commercial .school-section .h2-school {
+  color: #504A9E !important;
+}
+.commercial .school-section .card-tel svg {
+  stroke: #504A9E !important;
+}
+.commercial .school-section .card-tel a:hover {
+  color: #FF0552 !important;
+}
+.commercial .school-section .card-tel a:hover svg {
+  stroke: #FF0552 !important;
+}
+.commercial .school-section .card-mail a:hover {
+  color: #FF0552 !important;
+}
+.commercial .school-section .card-mail a:hover svg {
+  fill: #FF0552 !important;
+}
+.commercial .school-section .card-insta a:hover {
+  color: #FF0552 !important;
+}
+.commercial .school-section .card-insta a:hover svg {
+  fill: #FF0552 !important;
+}
+.commercial .school-section a {
+  color: #504A9E !important;
+}
+.commercial .school-section a svg {
+  fill: #504A9E !important;
+}
+.commercial footer .social-links {
+  background: #FF0552;
+}
+
+.communication {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+}
+.communication header .filiere {
+  color: #71BE44;
+}
+.communication header .blue-slash {
+  color: #71BE44;
+}
+.communication .logo-section {
+  background: #0094d9;
+}
+.communication .banque-section {
+  background-color: #0094d9;
+}
+.communication .banque-section .masqued-green svg {
+  fill: #00BDF1;
+}
+.communication .banque-section .white-smiley svg {
+  fill: #504A9E;
+}
+.communication .banque-section .banque-content h1:after {
+  background: url("../img/communication-avenirs-augmentes.svg") no-repeat;
+  background-size: 100px;
+  right: -20px;
+}
+@media (min-width: 576px) {
+  .communication .banque-section .banque-content h1:after {
+    top: 90px !important;
+  }
+}
+@media (min-width: 768px) {
+  .communication .banque-section .banque-content h1:after {
+    background-size: 120px;
+    top: 105px !important;
+  }
+}
+@media (min-width: 992px) {
+  .communication .banque-section .banque-content h1:after {
+    background-size: 140px;
+    top: 20px !important;
+    right: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .communication .banque-section .banque-content h1:after {
+    background-size: 140px;
+    right: 40px;
+    top: 25px !important;
+  }
+}
+.communication .banque-section .banque-content h1 .blue-slash {
+  color: #71BE44;
+}
+.communication .agenda-section {
+  background: linear-gradient(to right, #71BE44, #A2CE62);
+}
+.communication .agenda-section:after {
+  background: url("../img/communication-graduate-yellow-smiley.png") no-repeat;
+}
+.communication .agenda-section .agenda-link:hover {
+  color: #71BE44 !important;
+}
+.communication .agenda-section .agenda-link:hover svg {
+  fill: #71BE44 !important;
+}
+.communication .formation-section {
+  background: linear-gradient(to right, #71BE44, #A2CE62);
+}
+.communication .formation-section .li-arrow svg {
+  fill: #A2CE62 !important;
+}
+.communication .study-section .h2-study {
+  color: #A2CE62 !important;
+}
+.communication .study-section li:before {
+  color: #A2CE62 !important;
+}
+.communication .school-section {
+  background: linear-gradient(to right, #71BE44, #A2CE62);
+}
+.communication .school-section:before {
+  background-image: url("../img/communication-school-graduated.svg");
+}
+.communication .school-section .h2-school {
+  color: #A2CE62 !important;
+}
+.communication .school-section .card-tel svg {
+  stroke: #A2CE62 !important;
+}
+.communication .school-section .card-tel a:hover {
+  color: #0094d9 !important;
+}
+.communication .school-section .card-tel a:hover svg {
+  stroke: #0094d9 !important;
+}
+.communication .school-section .card-mail a:hover {
+  color: #0094d9 !important;
+}
+.communication .school-section .card-mail a:hover svg {
+  fill: #0094d9 !important;
+}
+.communication .school-section .card-insta a:hover {
+  color: #0094d9 !important;
+}
+.communication .school-section .card-insta a:hover svg {
+  fill: #0094d9 !important;
+}
+.communication .school-section a {
+  color: #A2CE62 !important;
+}
+.communication .school-section a svg {
+  fill: #A2CE62 !important;
+}
+.communication .school-section .school-masqued-smiley svg {
+  fill: #504A9E;
+}
+.communication .school-section .school-smiley svg {
+  fill: #00BDF1;
+}
+.communication footer .social-links {
+  background: #0094d9;
+}
+
+.comptabilite {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+}
+.comptabilite header .filiere {
+  color: #F9A51A;
+}
+.comptabilite header .blue-slash {
+  color: #F9A51A;
+}
+.comptabilite .logo-section {
+  background-color: #00B7CD;
+}
+.comptabilite .banque-section {
+  background-color: #00B7CD;
+}
+.comptabilite .banque-section .masqued-green svg {
+  fill: #504A9E;
+}
+.comptabilite .banque-section .white-smiley svg {
+  fill: #00B7CD;
+}
+.comptabilite .banque-section .banque-content h1:after {
+  background: url("../img/compta-avenirs-augmentes.svg") no-repeat;
+  background-size: 100px;
+  right: -20px;
+  top: 20px !important;
+}
+@media (min-width: 768px) {
+  .comptabilite .banque-section .banque-content h1:after {
+    background-size: 120px;
+    top: 20px !important;
+  }
+}
+@media (min-width: 992px) {
+  .comptabilite .banque-section .banque-content h1:after {
+    background-size: 140px;
+    right: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .comptabilite .banque-section .banque-content h1:after {
+    background-size: 140px;
+    right: 40px;
+    top: 25px !important;
+  }
+}
+.comptabilite .banque-section .banque-content h1 .blue-slash {
+  color: #F9A51A;
+}
+.comptabilite .agenda-section {
+  background: linear-gradient(to right, #F9A51A, #F9BD1A);
+}
+.comptabilite .agenda-section:after {
+  background: url("../img/communication-graduate-yellow-smiley.png") no-repeat;
+}
+@media (min-width: 1200px) {
+  .comptabilite .agenda-section:after {
+    background-size: 370px !important;
+    top: -370px;
+    right: -30px;
+  }
+}
+.comptabilite .agenda-section .agenda-link:hover {
+  color: #00B7CD !important;
+}
+.comptabilite .agenda-section .agenda-link:hover svg {
+  fill: #00B7CD !important;
+}
+.comptabilite .formation-section {
+  background: linear-gradient(to right, #F9A51A, #F9BD1A);
+}
+.comptabilite .formation-section .li-arrow svg {
+  fill: #00a66c !important;
+}
+.comptabilite .study-section .h2-study {
+  color: #FAA632 !important;
+}
+.comptabilite .study-section li:before {
+  color: #FAA632 !important;
+}
+.comptabilite .school-section {
+  background: linear-gradient(to right, #F9A51A, #F9BD1A);
+}
+.comptabilite .school-section .h2-school {
+  color: #ED8B03 !important;
+}
+.comptabilite .school-section .card-tel svg {
+  stroke: #ED8B03 !important;
+}
+.comptabilite .school-section .card-tel a:hover {
+  color: #00B7CD !important;
+}
+.comptabilite .school-section .card-tel a:hover svg {
+  stroke: #00B7CD !important;
+}
+.comptabilite .school-section .card-mail a:hover {
+  color: #00B7CD !important;
+}
+.comptabilite .school-section .card-mail a:hover svg {
+  fill: #00B7CD !important;
+}
+.comptabilite .school-section .card-insta a:hover {
+  color: #00B7CD !important;
+}
+.comptabilite .school-section .card-insta a:hover svg {
+  fill: #00B7CD !important;
+}
+.comptabilite .school-section a {
+  color: #ED8B03 !important;
+}
+.comptabilite .school-section a svg {
+  fill: #ED8B03 !important;
+}
+.comptabilite .school-section .school-masqued-smiley svg, .comptabilite .school-section .school-smiley svg {
+  fill: #00B7CD;
+}
+.comptabilite footer .social-links {
+  background-color: #00B7CD;
+}
+
+.bfa .agenda-section .agenda-title:before {
+  width: 185px !important;
+}
+
+.bac .logo-section {
+  background-color: #FF0552;
+}
+.bac .banque-section {
+  background-color: #FF0552;
+}
+.bac .banque-section .banque-content .filieres {
+  background: #00ADF2;
+}
+.bac .banque-section .smiley {
+  fill: #FECA2E;
+  width: 77px;
+  height: 77px;
+  position: absolute;
+  right: 120px;
+  top: -13px;
+}
+.bac .banque-section .white-smiley svg {
+  fill: #504A9E;
+}
+.bac .banque-section .graduated-white svg {
+  fill: #FECA2E;
+}
+.agenda-section, .bac .formation-section, .bac .school-section {
+  background-color: #00ADF2;
+}
+@media (min-width: 768px) {
+  .agenda-section::after {
+    background: url("../img/graduated-blue.png");
+    top: -400px;
+    right: -70px;
+    background-size: 600px !important;
+    background-repeat: no-repeat;
+  }
+}
+.agenda-section .agenda-title .white-smiley {
+  width: 60px;
+  height: 153px;
+  position: absolute;
+  top: -20px;
+  left: -220px;
+  z-index: 1;
+  fill: white;
+}
+.agenda-section .agenda-details:before {
+  content: none;
+}
+.agenda-section .agenda-details .agenda-event {
+  padding: 10px;
+}
+
+@media (min-width: 1200px) {
+  .agenda-section .agenda-details .agenda-event:not(:last-of-type) {
+    border-right: 1px solid #a0a9b4 !important;
+  }
+}
+.agenda-section .agenda-details .agenda-event .agenda-info {
+  justify-content: start;
+  align-items: center;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 60px;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-content a {
+  color: #FF0552;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.agenda-section .agenda-details .agenda-event .agenda-info .agenda-content a svg {
+  fill: #FF0552;
+  margin-bottom: 6px;
+  margin-left: 15px;
+}
+.bac .formation-section h1 .formation-head-title:after {
+  background: url("../img/all-passions.png") no-repeat;
+}
+.bac .formation-section .formation-cards .formation-card-pad:nth-child(1) .formation-title {
+  background-color: #504A9E;
+}
+.bac .formation-section .formation-cards .formation-card-pad:nth-child(2) .formation-title {
+  background-color: #FF0552;
+}
+.bac .formation-section .formation-cards .formation-card-pad:nth-child(3) .formation-title {
+  background-color: #FAA632;
+}
+.bac .formation-section .formation-cards .formation-card-pad:nth-child(4) .formation-title {
+  background-color: #00A66C;
+}
+.bac .formation-section .formation-cards .formation-card-pad:nth-child(5) .formation-title {
+  background-color: #D4DF5A;
+}
+.bac .formation-section .formation-cards .formation-card-pad:nth-child(6) .formation-title {
+  background-color: #2383C5;
+}
+.bac .formation-section .formation-cards .formation-card-pad:nth-child(7) .formation-title {
+  background-color: #F38372;
+}
+.bac .formation-section .formation-cards .formation-card .formation-title {
+  height: auto;
+}
+.bac .formation-section .formation-cards .formation-card .formation-title h2 {
+  font-size: 22px;
+  padding: 10px 5px;
+  min-height: 80px;
+  top: 0;
+  color: white;
+}
+@media (min-width: 1400px) {
+  .bac .formation-section .formation-cards .formation-card .formation-title h2 {
+    font-size: 25px !important;
+    top: 0 !important;
+  }
+}
+.bac .formation-section .formation-cards .formation-card .formation-list ul li * {
+  font-size: 17px;
+}
+.bac .formation-section .formation-cards .formation-card .formation-list ul li span {
+  font-size: 14px;
+}
+.bac .formation-section .formation-cards .formation-card .formation-list ul li .li-arrow svg {
+  fill: #FF0552;
+}
+.bac .school-section .school-cards .school-card .text-card a svg {
+  fill: #504A9E;
+}
+.bac .school-section .school-cards .school-card .text-card .h2-school, .bac .school-section .school-cards .school-card .text-card a {
+  color: #504A9E;
+}
+.bac .school-section .school-cards .school-card .text-card .card-tel svg {
+  stroke: #504A9E;
+}
+.bac .social-links {
+  background-color: #504D9C;
+  position: relative;
+}
+.bac .social-links .smiley {
+  display: none;
+}
+@media (min-width: 768px) {
+  .bac .social-links .smiley {
+    fill: #FECA2E;
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    right: 120px;
+    bottom: 30px;
+    display: flex;
+  }
+}
+.bac .social-links::after {
+  content: none;
+}
+.bac .social-links .social-icons::before {
+  filter: invert(1);
+}
+.bac .social-links h1 {
+  color: white;
+}
+.bac .copyright a {
+  text-decoration: none;
+}
+@media (min-width: 768px) {
+  .bac .study-section .study-card {
+    padding: 40px 50px 65px 125px;
+  }
+}
+.bac .study-section .study-card .study-text p:before {
+  background: url("../img/minute-conseil-img.jpg");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Intro", sans-serif !important;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+body main {
+  position: relative;
+}
+body .uppercase {
+  text-transform: uppercase;
+}
+body .blue-bullet {
+  list-style: none; /* Remove default bullets */
+}
+body .blue-bullet li::before {
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+/*# sourceMappingURL=styles.css.map */

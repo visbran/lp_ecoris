@@ -1,0 +1,178 @@
+.comptabilite {
+  /**************************************/
+  /*        HEADER                      */
+  /**************************************/
+  header {
+
+    .filiere {
+      color: $comptaDarkOrange;
+    }
+    .blue-slash {
+      color: $comptaDarkOrange;
+    }
+  }
+
+  .logo-section {
+    background-color: $comptaBackgroundBlue;
+  }
+
+  /**************************************/
+  /*       Banque-section              */
+  /**************************************/
+
+  .banque-section {
+    background-color: $comptaBackgroundBlue;
+
+    .masqued-green {
+      svg {
+        fill: $commercialViolet;
+      }
+    }
+    .white-smiley {
+      svg {
+        fill: $comptaBackgroundBlue;
+      }
+    }
+    .banque-content {
+      h1 {
+        &:after {
+          background: url("../img/compta-avenirs-augmentes.svg") no-repeat;
+          background-size: 100px;
+          right: -20px;
+          top: 20px!important;
+
+          @media (min-width:768px)  {
+            background-size: 120px;
+            top: 20px!important;
+          }
+          @media (min-width:992px)  {
+            background-size: 140px;
+            right: 40px;
+          }
+          @media (min-width:1200px)  {
+            background-size: 140px;
+            right: 40px;
+            top: 25px!important;
+          }
+        }
+        .blue-slash {
+          color: $comptaDarkOrange;
+        }
+      }
+    }
+  }
+
+  /**************************************/
+  /*        agenda -section            */
+  /**************************************/
+  .agenda-section {
+    background: linear-gradient(to right, $comptaDarkOrange, $comptaLightOrange);
+
+    &:after {
+      background: url("../img/communication-graduate-yellow-smiley.png") no-repeat;
+      @media (min-width: 1200px) {
+        background-size: 370px!important;
+        top: -370px;
+        right: -30px;
+      }
+    }
+    .agenda-link {
+      &:hover {
+        color: $comptaBackgroundBlue!important;
+
+        svg {
+          fill: $comptaBackgroundBlue!important;
+        }
+      }
+    }
+  }
+
+  /**************************************/
+  /*        formation - section         */
+  /**************************************/
+
+  .formation-section {
+    background: linear-gradient(to right, $comptaDarkOrange, $comptaLightOrange);
+
+    .li-arrow {
+      svg {
+        fill: $darkgreen !important;
+      }
+    }
+  }
+
+  /**************************************/
+  /*        study - section             */
+  /**************************************/
+  .study-section {
+    .h2-study {
+      color: $comptaHeaderSmileyOrange !important;
+    }
+    li:before {
+      color: $comptaHeaderSmileyOrange!important;
+    }
+  }
+
+  /**************************************/
+  /*        school - section             */
+  /**************************************/
+  .school-section {
+    background: linear-gradient(to right, $comptaDarkOrange, $comptaLightOrange);
+
+    .h2-school {
+      color: $comptaStudy!important;
+    }
+    .card-tel {
+      svg {
+        stroke: $comptaStudy !important;
+      }
+      a:hover {
+        color: $comptaBackgroundBlue!important;
+
+        svg {
+          stroke: $comptaBackgroundBlue!important;
+        }
+      }
+    }
+    .card-mail {
+      a:hover {
+        color: $comptaBackgroundBlue!important;
+
+        svg {
+          fill: $comptaBackgroundBlue!important;
+        }
+      }
+    }
+    .card-insta {
+      a:hover {
+        color: $comptaBackgroundBlue!important;
+
+        svg {
+          fill: $comptaBackgroundBlue!important;
+        }
+      }
+    }
+    a {
+      color: $comptaStudy!important;
+      svg {
+        fill: $comptaStudy!important;
+      }
+    }
+    .school-masqued-smiley, .school-smiley {
+      svg {
+        fill: $comptaBackgroundBlue;
+      }
+    }
+
+  }
+
+  /**************************************/
+  /*        footer - section             */
+  /**************************************/
+
+  footer {
+    .social-links {
+      background-color: $comptaBackgroundBlue;
+    }
+  }
+}

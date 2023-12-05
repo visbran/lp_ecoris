@@ -1,0 +1,302 @@
+/**************************************/
+/*         FOOTER                     */
+/**************************************/
+footer {
+  position: relative;
+}
+
+/**************************************/
+/*         FOOTER - SOCIAL LINKS      */
+/**************************************/
+.social-links {
+  background-color: $yellow;
+  text-align: center;
+  padding: 29px 0px 40px 0px;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 72px;
+    height: 73px;
+    background-image: url("../img/blacksmiley.svg");
+    background-size: 72px;
+    right: 20px;
+    bottom: 10px;
+
+  }
+
+  h1 {
+    font-family: $f-secondary;
+    font-size: 20px;
+    margin-bottom: 21px;
+  }
+
+  h2 {
+    display: none;
+  }
+
+
+  a {
+    width: 92px;
+    margin-bottom: 48px;
+
+    svg {
+      #Tracé_161 {
+        fill: #45619d;
+      }
+
+      #fb {
+        fill: $white;
+      }
+
+      &:hover {
+        #Tracé_161 {
+          fill: $white;
+        }
+
+        #fb {
+          fill: #45619d;
+        }
+      }
+
+    }
+
+    &.linkedin-link {
+      svg {
+        transform: rotate(15deg);
+        margin-left: 10px;
+
+        #Ellipse_32, #Rectangle_37, #Tracé_170 {
+          fill: $white;
+        }
+
+        #Tracé_162 {
+          fill: #007bb5;
+        }
+
+        &:hover {
+          #Ellipse_32, #Rectangle_37, #Tracé_170 {
+            fill: #007bb5;
+          }
+
+          #Tracé_162 {
+            fill: $white;
+          }
+        }
+      }
+    }
+
+    &.instagram-link {
+      svg {
+        width: 97px;
+        height: 92px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+
+        #Tracé_163 {
+          fill: url('#Degrade_sans_nom');
+        }
+
+        #Tracé_167, #Tracé_168, #Ellipse_31 {
+          fill: $white;
+        }
+        &:hover {
+          #Tracé_163 {
+            fill: $white;
+          }
+          #Tracé_167, #Tracé_168, #Ellipse_31 {
+            fill: url('#Degrade_sans_nom');
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/**************************************/
+/*         FOOTER - COPYRIGHTS        */
+/**************************************/
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $f-secondary;
+  font-size: 14px;
+  padding: 70px 0px 55px 0px;
+  margin-bottom: 20px;
+
+  &:before {
+    background-image: url("../img/ECORIS_NEW_LOGO.png");
+    background-size: 100px;
+    position: absolute;
+    left: auto;
+    bottom: 90px;
+    margin: 0 auto;
+    content: "";
+    width: 100px;
+    height: 40px;
+  }
+
+  a {
+    color: $black !important;
+
+    &:hover {
+      color: $lightblueAdobe !important;
+    }
+  }
+}
+
+/**************************************/
+/*         footer - buttons           */
+/**************************************/
+
+#footer-buttons {
+  z-index: 3000;
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  background: white;
+
+  .footer-button {
+    background-color: $black;
+    border-radius: 5px;
+    padding: 10px 13px;
+    margin: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    a {
+      font-size: 12px;
+      color: $white;
+      text-decoration: none;
+      font-weight: bold;
+
+      svg {
+        width: 15px;
+        margin-right: 5px;
+      }
+
+      .button-full-text {
+        display: none;
+      }
+
+    }
+
+    &:hover {
+      background-color: $redAdobe;
+    }
+  }
+}
+
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+  footer {
+    .social-icons {
+      position: relative;
+    }
+
+    .social-links {
+      &:after {
+        bottom: 20px;
+        right: 40px;
+      }
+    }
+
+    #footer-buttons {
+      a {
+        display: flex;
+
+        .button-full-text {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  footer {
+    .social-icons {
+      &:before {
+        content: "";
+        background: no-repeat url("../img/stay-connected.svg");
+        width: 280px;
+
+        position: absolute;
+
+        height: 100px;
+        margin-left: -470px;
+      }
+    }
+
+    .copyright {
+      padding-top: 30px;
+
+      &:before {
+        left: 200px;
+        bottom: 40px;
+        margin: 0px;
+        background-size: 130px;
+        width: 130px;
+        height: 55px;
+      }
+    }
+
+    .social-links {
+      &:after {
+        bottom: 30px;
+        right: 60px;
+      }
+    }
+
+    #footer-buttons {
+      justify-content: center;
+    }
+  }
+
+}
+
+@media (min-width: 1200px) {
+  footer {
+    .copyright {
+      margin-bottom: 0px;
+    }
+
+    .social-icons {
+      &:before {
+        width: 350px;
+        height: 100px;
+        margin-left: -537px;
+      }
+    }
+
+    .social-links {
+      &:after {
+        right: 150px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  footer {
+    .social-icons {
+      &:before {
+        content: "";
+        background: no-repeat url("../img/stay-connected.svg");
+        width: 380px;
+        position: absolute;
+        margin-left: -585px;
+      }
+    }
+  }
+}

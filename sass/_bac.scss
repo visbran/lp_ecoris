@@ -1,0 +1,286 @@
+.bac {
+  .logo-section {
+    background-color: #FF0552;
+  }
+
+  .banque-section {
+    background-color: #FF0552;
+    
+    .banque-content {
+      .filieres {
+        background: #00ADF2;
+      }
+    }
+
+    .smiley {
+      fill: #FECA2E;
+      width: 77px;
+      height: 77px;
+      position: absolute;
+      right: 120px;
+      top: -13px;
+    }
+
+    .white-smiley {
+      svg {
+        fill: #504A9E;
+      }
+    }
+
+    .graduated-white {
+      svg {
+        fill: #FECA2E;
+      }
+    }
+  }
+
+  .agenda-section, .formation-section, .school-section {
+    background-color: #00ADF2;
+  }
+
+  .agenda-section {
+
+    @media (min-width: 768px) {
+      &::after {
+        background: url('../img/graduated-blue.png');
+        top: -400px;
+        right: -70px;
+        background-size: 600px !important;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .agenda-title {
+      .white-smiley {
+        width: 60px;
+        height: 153px;
+        position: absolute;
+        top: -20px;
+        left: -220px;
+        z-index: 1;
+        fill: white;
+      }
+    }
+
+    .agenda-details {
+
+      &:before {
+        content: none;
+      }
+      .agenda-event {
+        padding: 10px;
+
+        &:first-of-type {
+          border-right: 1px solid #a0a9b4 !important;
+          margin-right: 20px;
+        }
+        .agenda-date {
+          margin: 0;
+        }
+        .agenda-info {
+          justify-content: start;
+          align-items: start;
+
+          .agenda-content{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            min-height: 78px;
+            padding-left: 15px;
+            margin-top: 3px;
+
+            a {
+              color: #FF0552;
+              text-decoration: none;
+              text-transform: uppercase;
+
+              svg {
+                fill: #FF0552;
+                margin-bottom: 6px;
+                margin-left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+  }
+  .formation-section {
+
+    h1 {
+      .formation-head-title {
+        &:after {
+          background: url('../img/all-passions.png') no-repeat;
+        }
+      }
+    }
+    .formation-cards {
+
+      .formation-card-pad {
+        &:nth-child(1) {
+          .formation-title {
+            background-color: #504A9E;
+          }
+        }
+        &:nth-child(2) {
+          .formation-title {
+            background-color: #FF0552;
+          }
+        }
+        &:nth-child(3) {
+          .formation-title {
+            background-color: #FAA632;
+          }
+        }
+        &:nth-child(4) {
+          .formation-title {
+            background-color: #00A66C;
+          }
+        }
+        &:nth-child(5) {
+          .formation-title {
+            background-color: #D4DF5A;
+          }
+        }
+        &:nth-child(6) {
+          .formation-title {
+            background-color: #2383C5;
+          }
+        }
+        &:nth-child(7) {
+          .formation-title {
+            background-color: #F38372;
+          }
+        }
+      }
+      .formation-card {
+
+
+
+        .formation-title {
+          height: auto;
+
+
+
+          h2 {
+            font-size: 22px;
+            padding: 10px 5px;
+            min-height: 80px;
+            top: 0;
+            color: white;
+            @media (min-width: 1400px) {
+              font-size: 25px !important;
+              top: 0 !important;
+            }
+          }
+        }
+
+        .formation-list {
+          ul {
+            li {
+              * {
+                font-size: 17px;
+              }
+              span {
+                font-size: 14px;
+
+              }
+
+
+              .li-arrow {
+                svg {
+                  fill: #FF0552;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .school-section {
+    .school-cards {
+      .school-card {
+        .text-card {
+
+          a {
+            svg {
+              fill: #504A9E;
+            }
+          }
+          .h2-school, a {
+            color: #504A9E;
+          }
+
+          .card-tel {
+            svg {
+              stroke: #504A9E;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .social-links {
+    background-color: #504D9C;
+    position: relative;
+
+
+
+    .smiley {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .smiley {
+        fill: #FECA2E;
+        width: 77px;
+        height: 77px;
+        position: absolute;
+        right: 120px;
+        bottom: 30px;
+        display: flex;
+      }
+    }
+
+    &::after {
+      content: none;
+    }
+
+    .social-icons {
+      &::before {
+        filter: invert(1);
+      }
+    }
+
+    h1 {
+      color: white;
+    }
+  }
+
+  .copyright {
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .study-section {
+    .study-card {
+      @media (min-width: 768px) {
+        padding: 40px 50px 65px 125px;
+      }
+      .study-text {
+        p {
+          &:before {
+            background: url("../img/minute-conseil-img.jpg");
+          }
+        }
+      }
+    }
+  }
+}

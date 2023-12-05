@@ -1,0 +1,105 @@
+/**************************************/
+/*        HEADER                      */
+/**************************************/
+header {
+  display: none;
+}
+
+.logo-section {
+  background-color: $yellow;
+  text-align: center;
+  margin-bottom: -1px;
+
+  .logo-header {
+    margin-top: 30px;
+    width: 200px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  header.sticky {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+    background: $white;
+    align-items: center;
+    padding: 10px 0px;
+    max-height: fit-content;
+
+    img {
+      width: 100px;
+      margin-left: 20px;
+    }
+
+    .header-title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .filiere {
+      font-family: $f-secondary;
+      font-size: 18px;
+      color: $lightblueAdobe;
+      text-align: right;
+      padding-right: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      text-align: center;
+      margin: 0px;
+      font-weight: bold;
+
+      span {
+        color: $lightblueAdobe;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+
+      .header-button {
+        background-color: $black;
+        border-radius: 5px;
+        padding: 10px 13px;
+        margin: 10px;
+        position: relative;
+
+        a {
+          font-size: 12px;
+          color: $white;
+          text-decoration: none;
+          font-weight: bold;
+
+          svg {
+            width: 15px;
+            margin-right: 5px;
+          }
+
+          .show-on-big-screen {
+            display: none;
+          }
+        }
+
+        &:hover {
+          background-color: $redAdobe;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 1518px) {
+  header.sticky {
+    .download-button {
+      .show-on-big-screen {
+        display: inherit !important;
+      }
+    }
+  }
+}
